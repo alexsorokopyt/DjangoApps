@@ -28,11 +28,12 @@ def ticket_order(request):
             arrival_city = data.get('arrival_city')
             number_of_passengers = data.get('number_of_passengers')
             departure_date = data.get('departure_date')
-            if number_of_passengers == 1:
-                cost_of_all_tickets = BASIC_COST_OF_TICKET
-            elif number_of_passengers >= 2:
-                cost_of_one_ticket = BASIC_COST_OF_TICKET * 2
-                cost_of_all_tickets = cost_of_one_ticket * number_of_passengers
+            # if number_of_passengers == 1:
+            #     cost_of_all_tickets = BASIC_COST_OF_TICKET
+            # else:
+            #     cost_of_one_ticket = BASIC_COST_OF_TICKET * 2
+            #     cost_of_all_tickets = cost_of_one_ticket * number_of_passengers
+            cost_of_all_tickets = BASIC_COST_OF_TICKET if number_of_passengers == 1 else 2 * BASIC_COST_OF_TICKET * number_of_passengers
             context = {
                 'name': name,
                 'surname': surname,

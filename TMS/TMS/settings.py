@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'HW19',
+    'CW20',
 ]
 
 MIDDLEWARE = [
@@ -58,6 +59,7 @@ TEMPLATES = [
         'DIRS': [
             'templates',
             'HW19.templates',
+            'CW20.templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
