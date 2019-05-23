@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Successful order{% endblock %}
+
+{% block content %}
+<form action="{% url 'new_order' %}" method="POST">
+    You have successfully ordered tickets! <br>
+    <br>
+    <b>Check the information bellow:</b><br>
+    <i>Customer:</i> {{ name }} {{ surname }}<br>
+    <i>Flight:</i> {{ departure_city }} - {{ arrival_city }}<br>
+    <i>Departure date:</i> {{ departure_date }}<br>
+    <i>Number of ordered tickets:</i> {{ number_of_passengers }}<br><br>
+    <i><b>Total sum:</b></i> {{ currency }}{{ summ }}
+</form>{% endblock %}
