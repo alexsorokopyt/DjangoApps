@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'HW19',
     'CW20',
+    'HW20',
 ]
 
 

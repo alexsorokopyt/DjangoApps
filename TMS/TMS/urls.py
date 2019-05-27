@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('tickets_order/', include('HW19.urls')),
     path('cw20/', include('CW20.urls')),
+    path('hw20/', include('HW20.urls')),
 ]
