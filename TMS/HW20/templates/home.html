@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Home page{% endblock %}
+
+{% block content %}
+LIST OF REGISTERED CARS<br>
+<p><a href="{% url 'new_car' %}">Create new</a></p>
+{% for car in cars %}
+    <p>
+        <b>Car:</b> {{ car.color }} {{ car.brand }} {{ car.model }} ({{ car.year_of_manufacture }})
+        <br><b>Weight:</b> {{ car.weight }}kg
+        <br><b>Owner's name:</b> {{ car.full_owner_name }}
+        <br><a href="{% url 'delete' car.id %}">Delete</a>
+        <a href="{% url 'edit' car.id %}">Edit</a>
+    </p>
+{% endfor %}
+{% endblock %}
